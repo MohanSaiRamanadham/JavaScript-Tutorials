@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function headMethod(){
+        document.getElementById("paragraph").innerHTML="Script is written in head block";
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <p id="paragraph">This is code for JavaScript</p>
+    <button onclick="headMethod()">Head Submit</button>
+    <button onclick="bodyMethod()">Body Submit</button>
+    <script>
+        function bodyMethod(){
+          document.getElementById("paragraph").innerHTML="Script is written in body block";
+        }
+    </script>
+</body>
+</html>
