@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript_String</title>
+</head>
+<body>
+    <h1>Strings & it's methods</h1>
+    <p id="singleQuotes"></p>
+    
+    <script>
+        let x = "String in double quotes";
+        let y = 'String in single quotes';
+        let z = `String in back-ticks`;
+        document.getElementById("singleQuotes").innerHTML = x;
+        document.write(y);
+        alert(z);
+        console.log(x +""+y);
+    </script>
+    <p id="stringObject_1"></p>
+    <script>
+        document.write("String Objects");
+        let name = new String("Mohan");
+        document.getElementById("stringObject_1").innerHTML=name + ", This is a String object";
+        let Name = "Mohan";
+        document.write("name object is :' "+name+" ', Name variable is :' "+Name+" '.\n");
+        document.write("name object and Name variable are equal or not (==)...??\n ans: "+(name == Name));
+    </script>
+</body>
+</html>

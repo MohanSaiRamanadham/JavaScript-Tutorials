@@ -6,12 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="heading">This is Heading tag</h1>
-    <p id="paragraph">This is paragraph</p>
-    <!-- <button onclick="document.write(5+6);">click</button> -->
+    <p id="p"></p>
+    <button onclick='document.getElementById("p").innerHTML=myFunction()'>Click me</menu></button>
     <script>
-        document.write(5+6);
+        function myFunction(){
+            document.write("I am data in this function");
+        }
     </script>
-    
 </body>
 </html>
