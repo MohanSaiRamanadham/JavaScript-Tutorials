@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>String Methods</h1>
+  <p >my first name is : <span id="fname"></span></p>
+  <p >my last name is : <span id="lname"></span></p>
+  <p >my surname is : <span id="sname"></span></p>
+  <p >number of charecters in my first name is : <span id="sLen"></span></p>
+  <b>white spaces also counted when you use length property of Strings</b>
+  
+  <script>
+    let firstName = "Mohan";
+    let lastName = 'Sai';
+    let surName = `Ramanadham`;
+    document.getElementById("fname").innerHTML=firstName;
+    document.getElementById("lname").innerHTML=lastName;
+    document.getElementById("sname").innerHTML=surName;
+    document.getElementById("sLen").innerHTML=firstName.length;
+    document.writeln("<h2>Using Escape Charecters</h2>")
+    document.writeln("my full Name is : \"Mohan Sai Ramanadham\"<br>");
+    document.writeln("my date of birth is : 08\\23\\1998 <br>");
+    document.writeln(" <h2>Creating String Objects</h2><br>");
+    let stringObject = new String("Mohan");
+    document.writeln("this data is stored by <u>String Object :"+stringObject +" </u><br>");
+    document.writeln("extracting 2nd charecter from "+firstName+" by using \'charAt()\' Method  :"+ firstName.charAt(1)+ "<br>");
+    document.writeln("by using \"charCodeAt\" :"+ stringObject.charCodeAt(1)+"<br>");
+    document.writeln("by using \"at()\" :"+stringObject.at(-1)+"<br>");
+    document.writeln("by using \"[]\" :"+lastName[1]+"<br>");
+    let fullName = surName +" " + firstName +" "+lastName;    //Ramanadham Mohan Sai
+    document.write("My full Name is : <i>"+fullName+ "</i><br>");
+    document.writeln("<u><h3>Extracting String Parts : </h3></u><br>");
+    document.write("using \"slice()\" method :"+fullName.slice(11,16)+"<br>");
+    document.write("using \"slice()\" method :"+fullName.slice(-9,-4)+"<br>")
+    document.write("using \"substring()\" method :"+fullName.substring(11)+"<br>");
+    document.write("using \"substr()\" method :"+fullName.substr(-9,5)+"<br>");
+    document.write("<h2>Case Conversions</h2><br>");
+    document.writeln(fullName+ " is converted to "+ fullName.toUpperCase() + "<br>");
+    document.write(fullName + " is converted to "+ fullName.toLowerCase() + "<br>");
+    document.write("<h2> Using Concat demo</h2><br>");
+    document.write("full name is :"+surName.concat(" ",firstName).concat(" ", lastName) + "<br>");
+    document.write("<h2>Trim demo</h2><br>");
+    let officeName = "    GalaxE     ";
+    document.writeln("office Name is :" +officeName +" it\'s length is :"+ officeName.length+"<br>");
+    document.write("office name after using trim method :"+ officeName + " it\'s length is :"+officeName.trim().length+ "<br>");
+    document.write("office name after using trimStart() : "+officeName + " it\'s length is :"+officeName.trimStart().length + "<br>");
+    document.write("office name after using trimEnd()"+ officeName + "it\'s length is :"+ officeName.trimEnd().length+ "<br>");
+    document.write("<h2>Padding Methods</h2><br>");
+    let x = "1123";
+    document.write("PadStart ex :"+x.padStart(4,"0")+"<br>");
+    document.write("PadEnd ex :"+ x.padEnd(5,"0"));
+    document.write("<h2> Repeat() method demo :</h2><br>");
+    document.write("repeat mohan 5 times : "+(firstName+" ").repeat(5)+"<br>");
+    document.writeln("<h2>replace() method Demo<br></h2>");
+    document.write(lastName + " is modified like :" +lastName.replace("ai", "ye")+ "<br>");
+    let a = "Please visit Microsoft and Microsoft!";
+    document.write(a.replace("Microsoft","google")+ "<br>");
+    document.write(a.replace(/Microsoft/gi,"google")+"<br>");
+    document.write(a.replaceAll("Microsoft","google") + "<br>");
+    document.write(a.replaceAll(/Microsoft/g,"Galaxe") + "<br>");
+    let typeOfVehicles = "Car, Bike, Cycle";
+    const arrayName = typeOfVehicles.split(",");
+    document.write(typeof arrayName);
+    document.write("<h2>finding Indexes </h2><br>");
+    document.write("index of o in "+fullName + "is : "+ fullName.indexOf("o")+"<br>");
+    document.write("last index of a in "+ fullName + "is : "+ fullName.lastIndexOf("a")+ "<br>");
+    document.write("<h2>Using interplation</h2><br>");
+    document.write(`full name is : ${firstName} ${lastName} ${surName}<br>`);
+    let f = 100;
+    let g = 10;
+    document.write(`${(f*g)}<br>`);
+    document.write(`<u><h2>HTML in JAVA SCRIPT</h2></u><br>`);
+    let fruits = ["mango","Banana","Sapota"];
+    let htmlCode = "<ul>";
+    for(let xy= 0;xy<(fruits.length);xy++){
+      htmlCode +=`<li>${fruits[xy]}</li>`;
+    }
+    htmlCode +="</ul>"; 
+    document.writeln(htmlCode);
+    </script>
+</body>
+</html>

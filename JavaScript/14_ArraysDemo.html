@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2><u>JavaScript Arrays:</u></h2>
+    <script>
+        document.write(`array's are described as "const arrName = [item1, item2, item3,....];"<br>`);
+        const arrName1 = [1, 2, 3 ,4];
+        document.write(`array elements are : ${arrName1}<br>`);
+        document.write(`length of array : ${arrName1.length}<br>`);
+        let arrayString = arrName1.toString();
+        document.write(`Converting array's to Strings ${arrayString} and it's type is ${typeof arrayString}<br>`)
+        document.write(`<h2>Adding Array Elements</h2><br>`);
+        arrName1.push("krishna")
+        document.write(`using push to add an element${arrName1}<br>`);
+        const arrName2 = new Array(1,2,3,4);
+        document.write(`${arrName2}<br>`);
+        document.write(`${arrName2[0]}<br>`);
+        const arrName3 = new Array(20);
+        document.write(arrName3+"<br>");
+        document.write(`to check whether given variable is array or not use isArray method ${Array.isArray(arrName3)}<br>`)
+        document.write(`using at() method for accessing Array elements :${arrName1.at(3)}here we ca use negative indexing<br>`);
+        document.writeln(`using [] to access methods of an Array elements : ${arrName1[3]} negative indexing is not possible in this method<br>`);
+        document.write(`Using join() method on ${arrName1}<br>`);
+        document.write(`${arrName1.join("@")}<br>`);
+        document.write(`<h2>PUSHING & POPING elements on array</h2><br>`);
+        document.write(`Push operation : ${arrName1.push("Mohan")}<br>`);
+        document.write(arrName1+"<br>");
+        document.write(`Pop operation : ${arrName1.pop()}<br>`);
+        document.write(`<h2>SHIFT AND UNSHIFT operations</h2><br>`);
+        document.write(`shift operation demo :<br>`);
+        arrName1.shift();
+        document.write(arrName1+"<br>");
+        arrName1.unshift("Mohan");
+        document.write(arrName1+"<br>");
+        document.write(`<h2>delete operation on an array </h2><br>`);
+        delete arrName1[2];
+        document.write(`${arrName1}<br>`);
+        document.write(`<h2>Concatination operations</h2><br>`);
+        ar1=[1,2,3,4];
+        ar2=[3,4,5,6,7];
+        document.write(ar1.concat(ar2)+"<br>");
+        document.write(ar1.copyWithin(2,0)+"<br>");
+        
+
+    </script>
+</body>
+</html>

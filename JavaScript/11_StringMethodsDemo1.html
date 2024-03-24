@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>length of Mohan Sai Ramanadham is : " <span id="lengthOfName"></span>"</p>
+    <script>
+        let name = "Mohan Sai Ramanadham";
+        //length of String
+        document.getElementById("lengthOfName").innerHTML=name.length;
+        //Extracting a charecter from a String
+        document.writeln(name.charAt(6));  
+        document.writeln(name.charCodeAt(6));
+        document.writeln(name.at(-1));
+        document.writeln(name[1]);
+        //extracting a portion of String
+        document.writeln(name.slice(6, 9));
+        document.writeln(name.substring(6,9));
+        document.writeln(name.substring(-15,9));    //this will be equals to 0 to 9
+        document.writeln(name.substr(6,3));
+        //Case conversions
+        document.writeln(name.toUpperCase());
+        document.writeln(name.toLowerCase());
+        let boy = "Krishna";
+        let girl = "Radha";
+        document.writeln(boy +" "+ girl);
+        document.writeln(boy.concat(" ", girl))
+        let college = "     MVR        "
+        document.writeln(college.length);
+        document.writeln((college.trim()).length);
+        document.writeln(college.trimStart());
+        document.writeln((college.trimStart()).length);
+        document.writeln((college.trimEnd()));
+        document.writeln((college.trimEnd()).length);
+        //padding
+        document.write(girl.padStart(10,"0"));
+        document.write(girl.padEnd(10,"0"));
+        //repeat
+        document.writeln(name.repeat(5));
+        let newName = name.replace("Mohan Sai Ramanadham", "Mohan Sai");
+        document.writeln(newName);
+
+
+
+    </script>
+</body>
+</html>
